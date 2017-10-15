@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+
+  "name": "SearchHighLight",
+  "description": "This extension helps the user to check sensitive words.",
+  "version": "1.0",
+  "browser_action": {
+    "default_title": "Hightlight Words",
+    "default_icon": "./res/img/icon_hightlight_words_default_48X48.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+     "tabs",
+     "background",
+     "http://*/*",
+     "https://*/*",
+     "activeTab"
+  ],
+  "content_scripts": [{
+  	"matches": ["http://*/*", "https://*/*"],
+  	"js": [
+  		"./lib/jquery-3.2.1.min.js",
+      "./lib/jquery.mark.min.js",
+      "./js/content.js"
+  	]
+  }],
+  "web_accessible_resources": [
+      "**.css",
+      "**.html",
+      "**.js",
+      "**.png",
+      "**.gif",
+      "**.map"
+  ],
+  "offline_enabled": true,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
