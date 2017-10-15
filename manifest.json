@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "SearchHighLight",
+  "name": "Hightlight-Words",
   "description": "This extension helps the user to check sensitive words.",
   "version": "1.0",
   "browser_action": {
