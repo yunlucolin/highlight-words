@@ -25,7 +25,8 @@
   		"./lib/jquery-3.2.1.min.js",
       "./lib/jquery.mark.min.js",
       "./js/content.js"
-  	]
+  	],
+    "run_at": "document_end"
   }],
   "web_accessible_resources": [
       "**.css",

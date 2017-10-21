@@ -5,5 +5,9 @@ $(function() {
       $('body').mark(sensitiveWords);
       $('mark').css({background: 'red'});
     }
+    if (request.action === 'Stop') {
+      sensitiveWords = request.sensitiveWords;
+      $('body').unmark(sensitiveWords);
+    }
   });
 });
