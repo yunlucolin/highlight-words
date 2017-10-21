@@ -20,7 +20,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
 
 function updateListenser(tabId, changeInfo, tab) {
   if(changeInfo.status === 'complete' && sensitiveWords) {
-    // TODO how
     chrome.tabs.sendMessage(tabId, {action: 'Check', sensitiveWords: sensitiveWords}); // set 'run_at': 'document_end' in 'content_scripts' to ensure run after all DOM and avoid errors in the web prevent mark.js?
+    // TODO how about set a interval and keep update content marked during uodating?
   }
 }
