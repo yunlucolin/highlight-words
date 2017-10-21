@@ -13,17 +13,14 @@ chrome.browserAction.onClicked.addListener((tab) => {
   } else {
     chrome.browserAction.setIcon({path:"./res/img/icon_hightlight_words_default_48X48.png"});
     chrome.tabs.sendMessage(tab.id, {action: 'Stop', sensitiveWords: sensitiveWords});
-    // TODO store all tabs where ran mark.js, and unmark all them. 
+    // TODO store all tabs where ran mark.js, and unmark all them.
     chrome.tabs.onUpdated.removeListener(updateListenser);
   }
 });
 
- var updateListenser = (tabId, changeInfo, tab) => {
+function updateListenser(tabId, changeInfo, tab) {
   if(changeInfo.status === 'complete' && sensitiveWords) {
-    // setTimeout(() => {
-    //   chrome.tabs.sendMessage(tabId, {action: 'Check', sensitiveWords: sensitiveWords});
-    // }, 1000);
-    // TODO how to ensure to get message when error in the web?
-    chrome.tabs.sendMessage(tabId, {action: 'Check', sensitiveWords: sensitiveWords});
+    // TODO how
+    chrome.tabs.sendMessage(tabId, {action: 'Check', sensitiveWords: sensitiveWords}); // set 'run_at': 'document_end' in 'content_scripts' to ensure run after all DOM and avoid errors in the web prevent mark.js?
   }
-};
+}
