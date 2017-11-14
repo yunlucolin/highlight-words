@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+  <title>HlighlightWords Popup</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+  <script src="../lib/vue.js"></script>
+
+  <!-- bootstrap-vue -->
+  <!-- <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap@next/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" /> -->
+  <!-- bootstrap-vue -->
+  <!-- <script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+  <script src="//unpkg.com/tether@latest/dist/js/tether.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script> -->
+  <!-- failed because of CSP -->
+
+  <script src="../utils/index.js"></script>
+</head>
+
+<body>
+  <div class="root">
+    <button class="check" v-on:click="check">Check</button>
+    <button class="add" v-on:click="add">Add</button>
+    <button class="remove" v-on:click="remove">Delete</button> <!-- can not use 'delete', the key word in js -->
+    <button class="stop" v-on:click="stop">Stop</button>
+  </div>
+
+  <script src="../js/popup.js"></script>
+</body>
+
+</html>

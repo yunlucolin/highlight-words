@@ -6,7 +6,8 @@
   "version": "1.0",
   "browser_action": {
     "default_title": "Hightlight Words",
-    "default_icon": "./res/img/icon_hightlight_words_default_48X48.png"
+    "default_icon": "./res/img/icon_hightlight_words_default_48X48.png",
+    "default_popup": "html/popup.html"
   },
   "background": {
     "scripts": ["background.js"],
@@ -24,7 +25,9 @@
   	"js": [
   		"./lib/jquery-3.2.1.min.js",
       "./lib/jquery.mark.min.js",
-      "./js/content.js"
+      "./lib/vue.js",
+      "./js/content.js",
+      "utils/index.js"
   	],
     "run_at": "document_end"
   }],
