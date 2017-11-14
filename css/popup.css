@@ -1,0 +1,36 @@
+@import "./custom.scss";
+
+body {
+  font-family: verdana;
+  font-size: 80%;
+  text-decoration: none;
+  color: #555753;
+  background: #ffffff;
+  margin: 0;
+}
+
+button {
+  padding: 10px;
+  width: 80px;
+  font-weight: 450;
+}
+
+.ctrl {
+
+}
+
+.check {
+  background-color: #00FF44;
+}
+
+.stop {
+  background-color: red;
+}
+
+.add {
+  background-color: cyan;
+}
+
+.delete {
+  background-color: silver;
+}
